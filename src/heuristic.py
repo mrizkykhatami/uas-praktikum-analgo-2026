@@ -13,8 +13,6 @@ Kompleksitas Waktu : O(n^2)
 
 Kompleksitas Ruang : O(n)
   - visited[] dan rute[] masing-masing berukuran n
-
-Tidak menggunakan library eksternal untuk logika pencarian
 """
 
 import time
