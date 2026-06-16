@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "description": "Parameter skenario ekonomi untuk simulasi TCO",
+    "satuan_harga_bbm": "Rupiah per liter",
+    "satuan_biaya_komputasi": "Rupiah per milidetik",
+    "satuan_berat": "kilogram"
+  },
+
+  "skenario": {
+    "subsidi": {
+      "nama": "Skenario Subsidi",
+      "deskripsi": "Harga BBM sangat murah akibat subsidi pemerintah",
+      "harga_bbm_per_liter": 5000
+    },
+    "krisis": {
+      "nama": "Skenario Krisis",
+      "deskripsi": "Harga BBM melambung tinggi akibat krisis energi",
+      "harga_bbm_per_liter": 20000
+    }
+  },
+
+  "parameter_kendaraan": {
+    "deskripsi": "Motor pengiriman dengan beban paket dinamis",
+    "kapasitas_maksimal_kg": 30.0,
+    "rasio_konsumsi_penuh_liter_per_km": 0.05,
+    "rasio_konsumsi_kosong_liter_per_km": 0.02,
+    "catatan": "Rasio konsumsi bervariasi linear sesuai beban: semakin ringan beban, semakin hemat BBM"
+  },
+
+  "parameter_komputasi": {
+    "biaya_per_milidetik": 50,
+    "satuan": "Rupiah per milidetik eksekusi algoritma"
+  }
+}

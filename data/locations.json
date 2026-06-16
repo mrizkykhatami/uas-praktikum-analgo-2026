@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "description": "Data lokasi Hub dan pelanggan untuk simulasi Last-Mile Delivery",
+    "region": "Bandung Raya, Jawa Barat",
+    "unit_jarak": "kilometer (km)",
+    "total_titik": 11,
+    "hub_index": 0
+  },
+
+  "lokasi": [
+    { "id": 0, "nama": "Hub - Gudang Pusat Gedebage", "tipe": "hub" },
+    { "id": 1, "nama": "Alun-alun Bandung",           "tipe": "pelanggan" },
+    { "id": 2, "nama": "Cihampelas Walk",             "tipe": "pelanggan" },
+    { "id": 3, "nama": "Pasar Baru Bandung",          "tipe": "pelanggan" },
+    { "id": 4, "nama": "Buah Batu",                   "tipe": "pelanggan" },
+    { "id": 5, "nama": "Cimahi",                      "tipe": "pelanggan" },
+    { "id": 6, "nama": "Ujungberung",                 "tipe": "pelanggan" },
+    { "id": 7, "nama": "Margahayu",                   "tipe": "pelanggan" },
+    { "id": 8, "nama": "Dago",                        "tipe": "pelanggan" },
+    { "id": 9, "nama": "Antapani",                    "tipe": "pelanggan" },
+    { "id": 10,"nama": "Sumedang",                    "tipe": "pelanggan" }
+  ],
+
+  "paket": [
+    { "tujuan_id": 1,  "berat_kg": 3.5 },
+    { "tujuan_id": 2,  "berat_kg": 2.0 },
+    { "tujuan_id": 3,  "berat_kg": 4.0 },
+    { "tujuan_id": 4,  "berat_kg": 1.5 },
+    { "tujuan_id": 5,  "berat_kg": 5.0 },
+    { "tujuan_id": 6,  "berat_kg": 2.5 },
+    { "tujuan_id": 7,  "berat_kg": 3.0 },
+    { "tujuan_id": 8,  "berat_kg": 1.0 },
+    { "tujuan_id": 9,  "berat_kg": 2.0 },
+    { "tujuan_id": 10, "berat_kg": 6.0 }
+  ],
+
+  "adjacency_matrix": {
+    "keterangan": "Matriks simetris 11x11. Index baris = asal, index kolom = tujuan. Nilai = jarak (km).",
+    "labels": [
+      "Hub-Gedebage", "Alun-alun", "Cihampelas", "Pasar Baru",
+      "Buah Batu", "Cimahi", "Ujungberung", "Margahayu",
+      "Dago", "Antapani", "Sumedang"
+    ],
+    "matrix": [
+      [ 0.0, 11.2, 12.5, 11.8,  6.3, 19.4,  8.1,  8.7, 14.0,  7.2, 28.5],
+      [11.2,  0.0,  2.4,  1.1,  6.0, 10.8, 14.3,  7.5,  4.3,  6.8, 34.0],
+      [12.5,  2.4,  0.0,  1.8,  8.2,  8.5, 15.6,  8.9,  2.5,  9.1, 36.2],
+      [11.8,  1.1,  1.8,  0.0,  6.8,  9.9, 14.8,  8.0,  3.8,  7.4, 35.1],
+      [ 6.3,  6.0,  8.2,  6.8,  0.0, 15.7, 12.4,  4.5, 10.2,  4.1, 31.8],
+      [19.4, 10.8,  8.5,  9.9, 15.7,  0.0, 23.5, 13.2,  9.0, 17.6, 43.0],
+      [ 8.1, 14.3, 15.6, 14.8, 12.4, 23.5,  0.0, 14.9, 16.2,  6.5, 21.0],
+      [ 8.7,  7.5,  8.9,  8.0,  4.5, 13.2, 14.9,  0.0, 11.0,  8.2, 36.5],
+      [14.0,  4.3,  2.5,  3.8, 10.2,  9.0, 16.2, 11.0,  0.0, 10.5, 37.8],
+      [ 7.2,  6.8,  9.1,  7.4,  4.1, 17.6,  6.5,  8.2, 10.5,  0.0, 26.3],
+      [28.5, 34.0, 36.2, 35.1, 31.8, 43.0, 21.0, 36.5, 37.8, 26.3,  0.0]
+    ]
+  }
+}
