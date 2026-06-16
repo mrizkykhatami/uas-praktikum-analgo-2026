@@ -17,10 +17,33 @@ Beban berkurang setiap kali kurir mengantar paket ke pelanggan.
 import json
 from graph import Graph
 
+# Default Scenario
+RASIO_PENUH_DEFAULT  = 0.05
+RASIO_KOSONG_DEFAULT = 0.02
+KAPASITAS_MAX_DEFAULT = 30.0
+BIAYA_KOMPUTASI_DEFAULT = 50
+
 def load_scenario(filepath: str) -> dict:
     """Muat parameter skenario dari file JSON."""
-    with open(filepath, 'r', encoding='utf-8') as f:
-        return json.load(f)
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        # Fallback ke konstanta default jika file tidak ditemukan atau error
+        return {
+            'skenario': {
+                'subsidi': {'harga_bbm_per_liter': 5000},
+                'krisis':  {'harga_bbm_per_liter': 20000}
+            },
+            'parameter_kendaraan': {
+                'kapasitas_maksimal_kg': KAPASITAS_MAX_DEFAULT,
+                'rasio_konsumsi_penuh_liter_per_km':  RASIO_PENUH_DEFAULT,
+                'rasio_konsumsi_kosong_liter_per_km': RASIO_KOSONG_DEFAULT,
+            },
+            'parameter_komputasi': {
+                'biaya_per_milidetik': BIAYA_KOMPUTASI_DEFAULT
+            }
+        }
 
 
 def hitung_rasio_konsumsi(
