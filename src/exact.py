@@ -12,7 +12,6 @@ seragam di semua segmen, sehingga urutan rute termurah identik untuk
 skenario subsidi maupun krisis. Biaya rupiah dihitung terpisah oleh cost.py.
 
 Kompleksitas: Waktu O(n!) worst-case (dipangkas pruning), Ruang O(n).
-Tanpa library eksternal untuk logika pencarian.
 """
 
 import time
