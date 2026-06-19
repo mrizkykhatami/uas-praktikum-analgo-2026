@@ -1,17 +1,5 @@
 """
 main.py
-Pipeline simulasi CLI: membandingkan Algoritma Heuristik (Greedy) vs
-Eksak (Backtracking) dari sisi Total Cost of Ownership (TCO) pada dua
-skenario ekonomi.
-
-Menjalankan:
-    python src/main.py                      # kedua skenario (default)
-    python src/main.py --scenario subsidi   # satu skenario
-    python src/main.py --scenario krisis
-    python src/main.py --repeat 5           # median dari N run (waktu stabil)
-
-Semua parameter dibaca dari data/locations.json & data/scenario.json.
-Tidak ada nilai yang di-hardcode di logika.
 """
 
 import os
