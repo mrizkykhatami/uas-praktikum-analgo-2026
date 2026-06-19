@@ -197,6 +197,7 @@ DFS membangun rute dengan memilih simpul berikutnya dari simpul yang tersisa: pa
 ## 6. Eksekusi Skenario Ekonomi & Hasil Simulasi
 
 Kedua algoritma dijalankan pada dua skenario, sesuai output di [docs/output_simulation.txt](docs/output_simulation.txt) dan grafik [docs/perbandingan_algoritma.png](docs/perbandingan_algoritma.png).
+![Gambar Grafik](docs/perbandingan_algoritma.png)
 
 ### Rute yang Dihasilkan
 
@@ -211,9 +212,9 @@ Algoritma eksak menemukan rute **19,70 km lebih pendek** dan menghemat **≈ 0,6
 
 | Skenario | Algoritma | Jarak | Biaya BBM | Biaya Komputasi | **TCO** | Rekomendasi |
 | --- | --- | --- | --- | --- | --- | :---: |
-| **Subsidi**<br>(Rp 5.000/L) | Greedy | 123,80 km | Rp 19.323,75 | Rp 0,50 | **Rp 19.324,25** | ✅ |
+| **Subsidi**<br>(Rp 5.000/L) | Greedy | 123,80 km | Rp 19.323,75 | Rp 0,50 | **Rp 19.324,25** | Greedy |
 | | Backtracking | 104,10 km | Rp 15.862,75 | Rp 50.566,25 | Rp 66.429,00 | |
-| **Krisis**<br>(Rp 20.000/L) | Greedy | 123,80 km | Rp 77.295,00 | Rp 0,50 | **Rp 77.295,50** | ✅ |
+| **Krisis**<br>(Rp 20.000/L) | Greedy | 123,80 km | Rp 77.295,00 | Rp 0,50 | **Rp 77.295,50** | Greedy |
 | | Backtracking | 104,10 km | Rp 63.451,00 | Rp 50.566,25 | Rp 114.017,25 | |
 
 > Pada **kedua** skenario realistis, **Greedy unggul** secara TCO. Biaya komputasi eksak (≈ Rp 50.566) jauh melebihi penghematan BBM yang diperolehnya (Rp 3.461 di subsidi; Rp 13.844 di krisis).
